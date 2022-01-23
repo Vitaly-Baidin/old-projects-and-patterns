@@ -16,4 +16,14 @@ public class Currency {
     @Column(name = "char_code")
     private String charCode;
     private String name;
+
+    public Currency() {
+    }
+
+    public Currency(int numCode, String charCode, String name) {
+        this.numCode = numCode;
+        this.charCode = charCode;
+        this.name = name;
+    }
+
 }

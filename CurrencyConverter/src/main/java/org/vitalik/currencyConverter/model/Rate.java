@@ -1,15 +1,9 @@
 package org.vitalik.currencyConverter.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.math.BigDecimal;
 import java.sql.Date;
-import java.time.LocalDate;
 
 @Data
 @Entity

@@ -10,10 +10,8 @@ import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.math.BigDecimal;
 import java.sql.Date;
 import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -34,10 +32,9 @@ public class XMLService implements IXMLService {
 
             doc.getDocumentElement().normalize();
             NodeList nodeList = doc.getElementsByTagName("Valute");
-            //create an empty list for students
+
             currencies = new ArrayList<>();
 
-            //loop all available student nodes
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node node = nodeList.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -69,10 +66,8 @@ public class XMLService implements IXMLService {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
             LocalDate localDate = LocalDate.parse(doc.getElementsByTagName("ValCurs").item(0).getAttributes().getNamedItem("Date").getNodeValue(), formatter);
             Date date = Date.valueOf(localDate);
-            //create an empty list for students
             rates = new ArrayList<>();
             NumberFormat format = NumberFormat.getInstance(Locale.getDefault());
-            //loop all available student nodes
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node node = nodeList.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {

@@ -7,7 +7,6 @@ import org.vitalik.currencyConverter.model.Currency;
 import org.vitalik.currencyConverter.model.Rate;
 import org.vitalik.currencyConverter.repository.CurrencyRepository;
 import org.vitalik.currencyConverter.repository.RateRepository;
-import org.vitalik.currencyConverter.service.ICurrencyService;
 import org.vitalik.currencyConverter.service.IXMLService;
 
 import java.util.List;

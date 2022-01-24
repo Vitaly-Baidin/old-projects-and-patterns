@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Table(name = "currencies")
 public class Currency {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "num_code")
     private int numCode;
 

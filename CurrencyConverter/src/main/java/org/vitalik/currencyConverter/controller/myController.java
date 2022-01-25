@@ -9,6 +9,8 @@ import org.vitalik.currencyConverter.repository.CurrencyRepository;
 import org.vitalik.currencyConverter.repository.RateRepository;
 import org.vitalik.currencyConverter.service.IXMLService;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Controller
@@ -25,10 +27,10 @@ public class myController {
 
     @GetMapping("/init")
     public void parseCBR() {
+        Iterable<Rate> rateIterable = rateRepository.findAll();
         List<Currency> currencies = ixmlService.parseCurrency("http://www.cbr.ru/scripts/XML_daily.asp");
         List<Rate> rates = ixmlService.parseRate("http://www.cbr.ru/scripts/XML_daily.asp");
         currencyRepository.saveAll(currencies);
         rateRepository.saveAll(rates);
-
     }
 }

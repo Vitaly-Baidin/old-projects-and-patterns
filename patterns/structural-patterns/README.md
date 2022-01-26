@@ -1,4 +1,4 @@
-#Structural Patterns
+# Structural Patterns
 - [Adapter](https://github.com/Vitaly-Baidin/portfolio/tree/main/patterns/structural-patterns/adapter/)
 - [Bridge](https://github.com/Vitaly-Baidin/portfolio/tree/main/patterns/structural-patterns/bridge/)
 - [Composite](https://github.com/Vitaly-Baidin/portfolio/tree/main/patterns/structural-patterns/composite/)
